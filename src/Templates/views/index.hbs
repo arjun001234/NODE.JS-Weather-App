@@ -62,7 +62,7 @@
                 e.preventDefault();
             messageOne.textContent = 'Loading...';
             messageTwo.textContent = '';
-                fetch('http://localhost:3000/weather?search=' + inputValue.value).then((response) => {
+                fetch('/weather?search=' + inputValue.value).then((response) => {
                 response.json().then((data) => {
                    if(data.error) {
                        messageTwo.textContent = data.error

@@ -6,6 +6,9 @@ const forcast = require('./utils/forcast');
 
 const app = express();
 
+const port = process.env.PORT;
+
+
 const homePagePath = path.join(__dirname,'../public');
 
 app.set('view engine','hbs');
@@ -69,6 +72,6 @@ app.get('*',(req,res) => {
     })
 })
 
-app.listen(3000,() => {
+app.listen(port,() => {
     console.log('It is Running')
 }); 
